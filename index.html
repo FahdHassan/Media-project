@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Introduction to Media Project</title>
+    <script src="app.js"> </script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h4 {text-align: center;}
+       
+        </style>
+</head>
+
+
+<body>
+   <div class="class1">
+       <label class="class1">Fahd Hassan</label>
+       <label class="class2">49-19213</label>
+       <label class="class3">T-10</label>
+       <br/>
+       <label class="class1">Mohammed Ghoniem</label>
+       <label class="class2">49-10219</label>
+       <label class="class3">T-10</label>
+
+   </div>
+    <div>
+        <p><b>Upload a grayscale image </b></p>
+        <input id="uploadImage" name="photo" type="file" accept="image/jpg,image/png" onchange="displayOriginalImage(this)" >
+    </div>
+
+    <div class="row" id="originalImage" style="display: none;">
+        <div class="column">
+            <p> The grayscale image you want to apply transformation on :</p>
+            <img src="" id="inputImage">
+        </div>
+        <div class="column" id="result" style="display: none;">
+            <p>Transformed Image :</p>
+            <canvas id="resultImage"></canvas>
+        </div>
+
+    </div><br>
+
+    <form id="transformation" style="display: none;">
+        <b> Select the required image transformation </b>
+        <select id="myList" onchange="showTransformForm()">
+            <option disabled selected> ---Choose transformation--- </option>
+            <option> Increase Brightness </option>
+            <option> Decrease Brightness </option>
+            <option> Increase Contrast </option>
+            <option> Decrease Contrast </option>
+            <option> Inverse </option>
+        </select>
+        <p> Your selected transformation is:
+            <input type="text" id="transformType" size="20">
+    </form>
+
+    <div id="increaseBrightnessInputs" style="display: none;">
+        <form id="increaseBrightnessForm" class="form">
+            <label>Increase Brightness Value: </label>
+            <input type="number" id="ib" placeholder="0" min="0" max="255"><br><br>
+            <input type="submit" value="Apply">
+        </form>
+
+        <p>Click on the Apply button to submit the value.</p>
+    </div>
+
+    <div id="decreaseBrightnessInputs" style="display: none;">
+        <form id="decreaseBrightnessForm" class="form">
+            <label>decrease Brightness Value: </label>
+            <input type="number" id="ib2" placeholder="0" min="0" max="255"><br><br>
+            <input type="submit" value="Apply">
+        </form>
+
+        <p>Click on the Apply button to submit the value.</p>
+    </div>
+
+    <div id="increaseContrastInputs" style="display: none;">
+        <form id="increaseContrastForm" class="form">
+            <label>Original Brightest Dark: </label>
+            <input type="number" id="o1" placeholder="0" min="0" max="255"><br><br>
+            <label>Original Darkest Bright: </label>
+            <input type="number" id="o2" placeholder="0" min="0" max="255"><br><br>
+            <label>Transformed Brightest Dark: </label>
+            <input type="number" id="t1" placeholder="0" min="0" max="255"><br><br>
+            <label>Transformed Darkest Bright: </label>
+            <input type="number" id="t2" placeholder="0" min="0" max="255"><br><br>
+            <input type="submit" value="Apply">
+        </form>
+
+        <p>Click on the Apply button to submit the value.</p>
+   
+    </div>
+
+    <div id="decreaseContrastInputs" style="display: none;">
+        <form id="decreaseContrastForm" class="form">
+            <label>Original Brightest Dark: </label>
+            <input type="number" id="o3" placeholder="0" min="0" max="255"><br><br>
+            <label>Original Darkest Bright: </label>
+            <input type="number" id="o4" placeholder="0" min="0" max="255"><br><br>
+            <label>Transformed Brightest Dark: </label>
+            <input type="number" id="t3" placeholder="0" min="0" max="255"><br><br>
+            <label>Transformed Darkest Bright: </label>
+            <input type="number" id="t4" placeholder="0" min="0" max="255"><br><br>
+            <input type="submit" value="Apply">>
+        </form>
+
+        <p>Click on the Apply button to submit the value.</p>
+   
+    </div>
+    <div id="inverse" style="display: none;">
+        <form id="inverseForm" class="form">
+        <input type="submit" value="Apply">>
+    </form>
+
+    <p>Click on the Apply button to submit the value.</p>
+
+    </div>
+    
+
+</body>
+
+</html>

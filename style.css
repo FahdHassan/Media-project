@@ -1,0 +1,32 @@
+.class1{
+  color: black;
+  align-content:center  ;
+  text-align: center;
+  font-size: 20px;
+  font-style: Bold;
+}
+.class2{
+  color: goldenrod;
+  align-content:center  ;
+  text-align: center;
+  font-size: 20px;
+  font-style: Bold;
+}
+.class3{
+  color:blue;
+  align-content:center  ;
+  text-align: center;
+  font-size: 20px;
+  font-style: Bold;
+}
+
+  .column {
+    float: left;
+    padding: 5px;
+  }
+  
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
